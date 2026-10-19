@@ -1,693 +1,480 @@
+<div align="center">
+
 # 📊 Supply Chain Performance Analytics
+
 ### Rochdale Spears Group | Power BI Portfolio Project
 
-![Power BI](https://img.shields.io/badge/Power_BI-Data_Visualization-F2C811?style=flat-square)
-![Supply Chain](https://img.shields.io/badge/Supply_Chain-Performance_Analytics-2563EB?style=flat-square)
-![DAX](https://img.shields.io/badge/DAX-KPI_Development-7C3AED?style=flat-square)
-![Design Thinking](https://img.shields.io/badge/Methodology-Design_Thinking-0891B2?style=flat-square)
+**Supply Chain Analytics • Business Intelligence • Data Visualization**
 
-**Project Type:** Supply Chain Analytics | Business Intelligence  
-**Company Case Study:** Rochdale Spears Group  
-**Primary Stakeholder:** Supply Chain Manager  
-**Tools:** Power BI, Power Query, DAX, Excel  
-**Methodology:** Human-Centered Design Thinking & Data Analytics
+![Power BI](https://img.shields.io/badge/Power_BI-Dashboard-F2C811?style=for-the-badge)
+![Excel](https://img.shields.io/badge/Excel-Dataset-217346?style=for-the-badge)
+![DAX](https://img.shields.io/badge/DAX-Analytics-7B61FF?style=for-the-badge)
+![Supply Chain](https://img.shields.io/badge/Supply_Chain-Performance-2563EB?style=for-the-badge)
+
+</div>
 
 ---
 
-# 01. 📌 Project Overview
+## 01. 📌 Project Overview
 
-## Background
+### Background
 
-Supply chain performance depends on the effective coordination of
-suppliers, inventory, demand planning, and customer order fulfillment.
+This project explores the supply chain operations of
+**Rochdale Spears Group** through data analysis and
+interactive Power BI dashboards.
 
-For a company operating across multiple products, suppliers, and
-customers, monitoring these interconnected activities is essential
-to maintaining operational efficiency and service reliability.
+The dataset represents the operational activities of a
+wholesaler, including procurement, inventory management,
+customer order fulfillment, and demand forecasting.
 
-This project examines the supply chain performance of
-**Rochdale Spears Group** through a data-driven analytical approach.
+The project combines **Design Thinking and Business Intelligence**
+to transform operational data into meaningful insights
+that support supply chain decision-making.
 
-The analysis focuses on four key dimensions:
+### 🎯 Project Objectives
 
-1. **Supplier Performance** – Evaluating supplier shipment reliability.
-2. **Customer Fulfillment** – Assessing customer order fulfillment performance.
-3. **Inventory Health** – Monitoring inventory levels and identifying stock risks.
-4. **Demand & Forecast Alignment** – Evaluating demand trends and inventory coverage.
+- Evaluate supplier shipment reliability.
+- Monitor customer order fulfillment performance.
+- Analyze inventory levels and stock availability.
+- Assess inventory coverage against forecasted demand.
+- Identify potential supply chain risks and inefficiencies.
+- Develop interactive dashboards to support operational decisions.
 
-The project aims to transform operational data into meaningful
-business insights through an interactive Power BI dashboard.
+### Project Information
 
-Rather than focusing solely on data visualization, the project
-adopts a business-oriented approach to identify performance gaps,
-investigate operational risks, and support supply chain decisions.
-
----
-
-# 02. 🎯 Business Problem
-
-## Problem Statement
-
-> How can Rochdale Spears Group improve end-to-end supply chain
-> visibility to evaluate operational performance, identify
-> inefficiencies, and better align inventory with customer demand?
-
-Supply chain managers need reliable information to understand
-how different operational activities influence overall performance.
-
-However, analyzing supplier deliveries, customer orders,
-inventory positions, and demand forecasts separately may
-limit visibility into their relationships.
-
-This creates several analytical challenges.
-
-### Key Business Challenges
-
-| Business Challenge | Description | Potential Business Impact |
-|-------------------|-------------|---------------------------|
-| Supply Chain Visibility | Difficulty obtaining a consolidated view of supply chain performance | Limited ability to identify operational priorities |
-| Supplier Reliability | Differences between confirmed and actual shipment dates | Supply uncertainty and potential downstream delays |
-| Customer Fulfillment | Customer orders may not be fulfilled within committed timelines | Reduced service reliability |
-| Inventory Management | Inventory levels may not align with actual or forecasted demand | Stockout or excess inventory risks |
-| Demand Planning | Differences between demand forecasts and actual customer requirements | Inefficient inventory planning |
-
-### Analytical Focus
-
-The project investigates whether supply chain performance issues
-are associated with:
-
-- Supplier shipment delays.
-- Insufficient inventory availability.
-- Changes in customer demand.
-- Demand forecasting gaps.
-- Inventory imbalances across products and periods.
-
-The objective is to identify where performance issues occur
-and explore their potential operational drivers.
+| Category | Description |
+|---|---|
+| Project | Supply Chain Performance Analytics |
+| Case Study | Rochdale Spears Group |
+| Business Function | Supply Chain Management |
+| Primary Stakeholder | Supply Chain Manager |
+| Data Source | Excel Workbook |
+| BI Tool | Microsoft Power BI |
+| Methodology | Design Thinking & Data Analytics |
+| Key Skills | Power Query, DAX, Data Modeling, Data Visualization |
 
 ---
 
-# 03. 🎯 Project Objectives
+## 02. 📂 Dataset Overview
 
-## Primary Objective
+### 2.1 Dataset Description
 
-**To develop an interactive, decision-oriented Supply Chain
-Performance Dashboard that enables supply chain managers to
-evaluate operational performance, identify supply chain risks,
-and prioritize improvement opportunities.**
+**Source:** `Data_supply chain baselining_202306.xlsx`
 
-The project is structured around five analytical objectives.
+The dataset contains operational records related to
+procurement, inventory management, customer orders,
+and demand forecasting.
 
-### Objective 1 — Establish a Supply Chain Performance Baseline
+The source workbook includes **five main datasets**
+representing interconnected supply chain activities.
 
-Develop a consolidated view of supply chain performance
-across suppliers, customer fulfillment, inventory, and demand.
+### 2.2 Dataset Summary
 
-**Key analytical activities:**
+| Dataset | Description | Time Coverage |
+|---|---|---|
+| Purchase Order | Purchase orders placed with manufacturers | Previous 12 months |
+| Wholesaler Inventory Record | Monthly inventory snapshots | Previous 12 months |
+| Wholesaler Customer Order Record | Customer orders received and shipped | Previous 15 months |
+| Wholesaler Order Forecast | Forecasted customer demand | Next 12 months |
+| SKU Mapping | Product attributes and master data | Reference table |
 
-- Evaluate overall operational performance.
-- Monitor key supply chain indicators.
-- Identify performance trends over time.
-- Compare performance across suppliers, products, and periods.
-- Highlight areas requiring further investigation.
+### 2.3 Dataset Details
 
-**Expected Outcome:**
+#### 📦 Dataset 1 — Purchase Order
 
-A comprehensive supply chain performance overview
-supporting management reviews and operational monitoring.
+Contains procurement transactions between the wholesaler
+and manufacturers.
 
-### Objective 2 — Evaluate Supplier Delivery Reliability
+**Main attributes:**
 
-Assess suppliers' ability to meet confirmed shipment commitments.
+- Vendor Code
+- Purchase Order Number
+- SKU
+- Order Acceptance Date
+- Confirmed Ship Date
+- Actual Ship Date
+- Order Quantity
 
-**Key analytical activities:**
+**Analytical purpose:**
 
-- Compare confirmed shipment dates with actual shipment dates.
-- Calculate supplier on-time shipment performance.
-- Measure shipment delays.
-- Identify suppliers with recurring delivery issues.
-- Analyze shipment performance by SKU and period.
+Evaluate supplier reliability, shipment delays,
+and procurement performance.
 
-**Key Performance Indicators:**
+#### 🏭 Dataset 2 — Wholesaler Inventory Record
 
-- Supplier On-Time Shipment Rate (%)
-- Late Purchase Order Rate (%)
-- Average Supplier Delay Days
-- Total Purchase Orders
-- Purchase Order Quantity
+Contains monthly inventory snapshots at the
+distribution center.
 
-**Expected Outcome:**
+**Main attributes:**
 
-Identify suppliers and products requiring closer monitoring
-and support discussions regarding shipment reliability
-and lead-time commitments.
+- SKU
+- Inventory Snapshot Date
+- Inventory Quantity
 
-### Objective 3 — Assess Customer Order Fulfillment
+**Analytical purpose:**
 
-Evaluate the company's ability to fulfill customer orders
-according to committed delivery schedules.
+Monitor inventory levels, identify stock variations,
+and evaluate inventory availability.
 
-**Key analytical activities:**
+#### 🚚 Dataset 3 — Wholesaler Customer Order Record
 
-- Measure customer on-time fulfillment performance.
-- Analyze fulfillment trends over time.
-- Identify customers and SKUs associated with delays.
-- Compare customer fulfillment and supplier performance.
-- Investigate potential relationships between inventory
-  availability and customer service levels.
+Contains customer orders received and shipped
+by the wholesaler.
 
-**Key Performance Indicators:**
+**Main attributes:**
 
-- Customer On-Time Fulfillment Rate (%)
-- Total Customer Orders
-- Customer Order Quantity
-- Average Lead Time
+- Customer Code
+- Customer Order Number
+- Order Receipt Date
+- Earliest Ship Date
+- Latest Ship Date
+- Actual Ship Date
+- SKU
+- Order Quantity
 
-**Expected Outcome:**
+**Analytical purpose:**
 
-Improve visibility into customer service reliability
-and identify opportunities to strengthen order fulfillment.
+Analyze customer demand, shipment performance,
+and order fulfillment reliability.
 
-### Objective 4 — Analyze Inventory Health & Demand Alignment
+#### 📈 Dataset 4 — Wholesaler Order Forecast
 
-Evaluate whether inventory levels are appropriately aligned
-with customer demand and forecasted requirements.
+Contains forecasted customer demand at SKU level.
 
-**Key analytical activities:**
+**Analytical purpose:**
 
-- Monitor inventory levels across products and periods.
-- Analyze inventory distribution by SKU, style, color, and size.
-- Identify potential excess inventory and shortage risks.
-- Compare available inventory with historical demand.
-- Evaluate inventory coverage against future forecasts.
-- Assess inventory positions toward the end of 2023.
+- Analyze future demand.
+- Evaluate inventory coverage.
+- Identify potential stock shortages.
+- Support inventory planning.
 
-**Key Performance Indicators:**
+#### 🏷️ Dataset 5 — SKU Mapping
 
-- Ending Inventory Quantity
-- Inventory Change (%)
-- Average Inventory Quantity
-- Months of Supply (MOS)
-- Forecast Demand Quantity
+Contains product reference information.
 
-**Expected Outcome:**
+**Main attributes:**
 
-Support inventory planning decisions by identifying
-products with potential stock imbalances and
-evaluating inventory coverage.
+- SKU
+- Style
+- Color
+- Size
 
-### Objective 5 — Support Data-Driven Decision-Making
+**Analytical purpose:**
 
-Translate operational performance indicators into
-actionable insights for supply chain management.
-
-**Key analytical activities:**
-
-- Identify critical performance gaps.
-- Prioritize suppliers, SKUs, and periods requiring attention.
-- Explore potential causes of operational inefficiencies.
-- Support supplier performance discussions.
-- Inform inventory and safety stock planning.
-- Provide insights for Sales & Operations Planning (S&OP).
-
-**Expected Outcome:**
-
-A decision-support dashboard that connects supply chain
-KPIs with operational improvement priorities.
+Support product segmentation and connect
+operational datasets through SKU identifiers.
 
 ---
 
-# 04. ❓ Key Business Questions
+## 03. 🧠 Design Thinking Methodology
 
-The analytical framework was developed around four
-business questions reflecting the information needs
-of supply chain management.
+The project follows a **human-centered Design Thinking approach**
+to ensure that dashboard development addresses
+stakeholder needs and relevant business questions.
 
-| Analytical Area | Key Business Question |
-|----------------|-----------------------|
-| Supply Chain Overview | How effectively is the overall supply chain performing? |
-| Supplier Performance | Are suppliers meeting shipment commitments, and where are delays occurring? |
-| Customer Fulfillment | Are customer orders fulfilled on time, and which customers or products are most affected by delays? |
-| Inventory & Demand | Are inventory levels aligned with actual demand and future forecasted requirements? |
+The methodology consists of five stages:
 
-These questions guide KPI selection, dashboard structure,
-and the development of analytical visualizations.
+**Empathize → Define → Ideate → Prototype → Test**
 
----
+### Step 1 — Empathize
 
-# 05. 🧠 Methodology — Human-Centered Design Thinking
+**Objective:** Understand the dataset, business context,
+and stakeholder expectations.
 
-This project follows a **human-centered Design Thinking approach**
-to ensure that the analytical solution addresses actual
-stakeholder needs.
+| Sub-step | Activities | Output |
+|---|---|---|
+| 1.1 Dataset Discovery | Identify dimensions, measures, and relevant attributes | Dataset understanding |
+| 1.2 Stakeholder Identification | Identify dashboard users and responsibilities | Supply Chain Manager |
+| 1.3 Stakeholder Needs | Understand reporting expectations and information needs | Stakeholder requirements |
+| 1.4 Business Context | Explore procurement, inventory, and fulfillment processes | Business understanding |
 
-The methodology connects business understanding,
-data analysis, and dashboard development.
+**Key questions:**
 
-## Phase 1 — Empathize
+- Who will use the dashboard?
+- What is the purpose of the analysis?
+- What information does the stakeholder need?
+- Which business decisions should the dashboard support?
 
-**Understand stakeholder needs and operational challenges.**
+### Step 2 — Define
 
-The initial analysis focuses on the perspective of
-the Supply Chain Manager.
+**Objective:** Translate stakeholder needs into
+specific analytical problems.
 
-Key information needs include:
+| Sub-step | Activities | Output |
+|---|---|---|
+| 2.1 Define Point of View | Analyze challenges from the stakeholder perspective | Business POV |
+| 2.2 Identify Pain Points | Identify potential supply chain performance issues | Business challenges |
+| 2.3 Define Business Questions | Translate challenges into analytical questions | Business questions |
+| 2.4 Define North Star Metric | Identify a primary performance indicator | Customer On-Time Fulfillment Rate |
 
-- Understanding overall supply chain performance.
-- Identifying suppliers with delivery reliability issues.
-- Monitoring customer order fulfillment.
-- Detecting potential inventory shortages or excess stock.
-- Understanding demand variations.
-- Comparing performance across periods and SKUs.
+**Problem Statement:**
 
-**Deliverable:** Stakeholder needs and operational pain points.
+> How can Rochdale Spears Group improve end-to-end
+> supply chain visibility to identify operational
+> performance gaps and support better decisions?
 
-## Phase 2 — Define
+### Step 3 — Ideate
 
-**Translate stakeholder needs into analytical problems.**
+**Objective:** Develop the analytical framework
+and dashboard design concept.
 
-The project defines four analytical dimensions:
+| Sub-step | Activities | Output |
+|---|---|---|
+| 3.1 KPI Selection | Define performance indicators | KPI framework |
+| 3.2 Analytical Dimensions | Identify time, supplier, customer, and product dimensions | Analytical structure |
+| 3.3 Dashboard Planning | Organize analytical perspectives | Dashboard structure |
+| 3.4 Visualization Selection | Select charts according to business questions | Visualization plan |
+| 3.5 Wireframing | Plan the visual layout | Dashboard mockup |
 
-1. Supplier Performance
-2. Customer Fulfillment
-3. Inventory Health
-4. Demand & Forecast Alignment
+### Step 4 — Prototype
 
-A North Star Metric is identified to connect operational
-performance with customer service reliability.
+**Objective:** Develop the Power BI analytical solution.
 
-**Deliverable:** Business problem, analytical objectives,
-key business questions, and KPI framework.
+| Sub-step | Activities | Output |
+|---|---|---|
+| 4.1 Data Preparation | Clean and transform datasets | Prepared data |
+| 4.2 Data Modeling | Establish analytical relationships | Data model |
+| 4.3 DAX Development | Create analytical measures | KPI calculations |
+| 4.4 Dashboard Development | Build Power BI visualizations | Dashboard |
+| 4.5 Interactive Features | Configure slicers and filters | Interactive reporting |
 
-## Phase 3 — Ideate
+### Step 5 — Test & Iterate
 
-**Design the analytical framework and dashboard structure.**
+**Objective:** Evaluate analytical accuracy,
+dashboard usability, and business relevance.
 
-This phase focuses on:
+| Sub-step | Activities | Expected Output |
+|---|---|---|
+| 5.1 KPI Validation | Verify calculation consistency | Reliable KPIs |
+| 5.2 Usability Review | Assess navigation and readability | Usability improvements |
+| 5.3 Business Relevance | Review alignment with business questions | Analytical validation |
+| 5.4 Dashboard Refinement | Improve layout and visualizations | Refined dashboard |
+| 5.5 Insights & Recommendations | Translate findings into business actions | Recommendations |
 
-- Identifying relevant KPIs.
-- Defining analytical dimensions.
-- Selecting appropriate visualizations.
-- Organizing information according to stakeholder priorities.
-- Establishing relationships between operational indicators.
+### Design Thinking Summary
 
-**Deliverable:** Dashboard concept and analytical structure.
-
-## Phase 4 — Prototype
-
-**Develop the Power BI analytical solution.**
-
-The dashboard development process includes:
-
-- Data preparation and transformation.
-- Data modeling.
-- DAX measure development.
-- KPI visualization.
-- Interactive filtering.
-- Dashboard layout and navigation.
-
-**Deliverable:** Interactive Power BI dashboard.
-
-## Phase 5 — Test & Iterate
-
-**Review dashboard usability and analytical relevance.**
-
-The evaluation framework considers:
-
-- KPI consistency and accuracy.
-- Clarity of visualizations.
-- Ease of navigation.
-- Relevance to business questions.
-- Ability to identify operational issues.
-
-**Deliverable:** Dashboard refinements and improvement opportunities.
+| Stage | Main Focus | Deliverable |
+|---|---|---|
+| Empathize | Understand stakeholder needs | Dataset & stakeholder analysis |
+| Define | Identify business problems | Problem statement & KPIs |
+| Ideate | Develop analytical solutions | Dashboard concept |
+| Prototype | Build Power BI dashboard | Analytical dashboard |
+| Test | Validate and improve | Refined solution |
 
 ---
 
-# 06. 📐 KPI Framework
+## 04. ⚙️ Data Preparation & Transformation
 
-The project uses a structured KPI framework covering
-supplier reliability, customer fulfillment,
-inventory management, and demand planning.
+**Tool: Power Query**
 
-## 6.1 Customer Fulfillment
+The data preparation framework focuses on
+improving data quality and preparing the
+source tables for analysis.
 
-### ⭐ North Star Metric: Customer On-Time Fulfillment Rate
+### Data Preparation Activities
 
-Measures the percentage of eligible customer orders
-fulfilled within their committed delivery timelines.
+| Step | Description |
+|---|---|
+| Data Profiling | Review data structure, missing values, and data quality |
+| Data Type Validation | Standardize dates, quantities, and identifiers |
+| Duplicate Verification | Identify duplicate records while preserving valid order lines |
+| Data Consistency | Verify SKU, supplier, and customer identifiers |
+| Data Transformation | Prepare fields required for analytical reporting |
+| Data Validation | Review consistency after transformation |
+
+---
+
+## 05. 🔗 Data Modeling
+
+The analytical model connects procurement,
+inventory, customer orders, forecasts,
+and product information.
+
+The SKU identifier serves as a common
+reference across the source tables.
+
+### Source Table Relationships
+
+| Table | Key | Analytical Role |
+|---|---|---|
+| Purchase Order | SKU | Supplier performance |
+| Inventory Record | SKU | Inventory analysis |
+| Customer Order Record | SKU | Customer fulfillment |
+| Order Forecast | SKU | Demand planning |
+| SKU Mapping | SKU | Product dimension |
+
+### Power BI Data Model
+
+![Power BI Data Model](images/data-model.png)
+
+*Figure 1. Power BI data model and table relationships.*
+
+---
+
+## 06. 📐 KPI Development
+
+The dashboard uses supply chain KPIs
+to evaluate operational performance.
+
+| Analytical Area | Key Performance Indicators |
+|---|---|
+| Supplier Performance | Supplier On-Time Rate, Average Delay Days |
+| Customer Fulfillment | Customer On-Time Shipment Rate |
+| Inventory Management | Ending Inventory, Inventory Trends |
+| Demand Planning | Forecast Demand, Months of Supply |
+
+### Supplier On-Time Shipment Rate
+
+Measures the proportion of eligible supplier
+shipments dispatched on time.
 
 **Formula:**
 
-Customer On-Time Fulfillment Rate (%) =
+`On-Time Supplier Shipments / Total Eligible Shipments × 100`
 
-(Number of Customer Orders Fulfilled On Time /
-Total Eligible Customer Orders) × 100
+### Customer On-Time Shipment Rate
 
-**Business Value:**
+Measures the proportion of eligible customer
+orders shipped within their committed timelines.
 
-This metric provides a customer-oriented perspective
-on overall supply chain reliability.
+**Formula:**
 
-It helps evaluate whether upstream supply,
-inventory availability, and downstream fulfillment
-activities support customer delivery commitments.
-
-**Note:** This metric measures on-time performance.
-A complete OTIF (On-Time In-Full) calculation also
-requires verification of fulfilled quantities.
-
----
-
-## 6.2 Supplier Performance
-
-| KPI | Definition | Business Purpose |
-|-----|------------|------------------|
-| Supplier On-Time Rate (%) | Percentage of eligible purchase orders shipped by the confirmed shipment date | Evaluate supplier reliability |
-| Late PO Rate (%) | Percentage of eligible purchase orders shipped after the confirmed date | Identify shipment delays |
-| Average Supplier Delay Days | Average difference between actual and confirmed shipment dates | Quantify delivery delays |
-| Total Purchase Orders | Number of purchase orders | Monitor procurement activity |
-| Total PO Quantity | Total quantity ordered | Evaluate procurement volume |
+`On-Time Customer Orders / Total Eligible Customer Orders × 100`
 
 ### Supplier Delay Days
 
-Supplier Delay Days =
+Measures the difference between actual
+and confirmed shipment dates.
 
-Actual Ship Date − Original Confirmed Ship Date
+**Formula:**
 
-Positive values indicate late shipments.
-
----
-
-## 6.3 Inventory Performance
-
-| KPI | Definition | Business Purpose |
-|-----|------------|------------------|
-| Ending Inventory Quantity | Available inventory at the end of a selected period | Monitor stock availability |
-| Average Inventory Quantity | Average inventory quantity over a defined period | Evaluate inventory trends |
-| Inventory Change (%) | Percentage change in inventory between periods | Identify stock variations |
-| Months of Supply (MOS) | Inventory coverage based on average monthly demand | Assess inventory sufficiency |
+`Actual Ship Date - Confirmed Ship Date`
 
 ### Months of Supply (MOS)
 
-MOS =
+Estimates inventory coverage based on
+forecasted customer demand.
 
-Ending Inventory Quantity /
-Average Monthly Forecast Demand
+**Formula:**
 
-This indicator estimates how many months
-the current inventory could cover forecasted demand.
+`Ending Inventory / Average Monthly Forecast Demand`
 
----
-
-## 6.4 Demand & Forecast Analysis
-
-| KPI | Definition | Business Purpose |
-|-----|------------|------------------|
-| Customer Order Quantity | Total quantity ordered by customers | Monitor demand |
-| Forecast Quantity | Projected demand for a selected period | Support planning |
-| Forecast Gap | Difference between forecasted and actual demand | Evaluate forecast alignment |
-| Next 6-Month Forecast | Total forecasted demand over the next six months | Assess future requirements |
-
-### Forecast Gap
-
-Forecast Gap =
-
-Actual Demand − Forecast Demand
-
-A positive value indicates actual demand
-exceeding the forecast.
-
-A negative value indicates actual demand
-below the forecast.
+*Note: Final KPI calculations depend on the
+business rules and DAX measures implemented
+in the Power BI model.*
 
 ---
 
-# 07. 🗂️ Analytical Dimensions
+## 07. 📊 Power BI Dashboard
 
-To support detailed analysis, performance indicators
-are evaluated across multiple dimensions.
+The Power BI report provides interactive
+visualizations to explore supply chain performance.
 
-| Dimension | Analytical Attributes |
-|-----------|----------------------|
-| Time | Month, Year, Reporting Period |
-| Product | SKU, Style, Color, Size |
-| Supplier | Supplier / Vendor Code |
-| Customer | Customer Code |
-| Supply Chain Activity | Purchase Orders, Customer Orders, Inventory, Forecast |
-
-These dimensions enable comparisons across
-different products, business partners, and time periods.
-
-They also support drill-down analysis to identify
-specific operational issues.
-
----
-
-# 08. 📊 Dashboard Structure
-
-The Power BI dashboard is designed to answer
-the project's key business questions.
-
-## Dashboard 1 — Supply Chain Overview
+### Dashboard 1 — Supply Chain Overview
 
 **Business Question:**
 
 How effectively is the overall supply chain performing?
 
-**Analytical Focus:**
+![Supply Chain Overview](images/dashboard-overview.png)
 
-- Overall supplier reliability.
-- Customer fulfillment performance.
-- Inventory availability.
-- Customer order trends.
-- Supply chain performance over time.
+*Figure 2. Supply Chain Performance Overview.*
 
-**Decision Support:**
-
-Identify areas requiring further operational investigation.
-
----
-
-## Dashboard 2 — Supplier Performance
+### Dashboard 2 — Supplier Performance
 
 **Business Question:**
 
-Are suppliers meeting their shipment commitments?
+Are suppliers meeting shipment commitments?
 
-**Analytical Focus:**
+![Supplier Performance](images/supplier-performance.png)
 
-- Supplier On-Time Shipment Rate.
-- Late Purchase Orders.
-- Average Supplier Delay Days.
-- Supplier performance trends.
-- Shipment performance by SKU.
+*Figure 3. Supplier Performance Analysis.*
 
-**Decision Support:**
-
-Identify suppliers associated with shipment delays
-and prioritize supplier performance reviews.
-
----
-
-## Dashboard 3 — Customer Fulfillment
+### Dashboard 3 — Customer Fulfillment
 
 **Business Question:**
 
-Are customer orders being fulfilled according
-to committed delivery schedules?
+Are customer orders being shipped on time?
 
-**Analytical Focus:**
+![Customer Fulfillment](images/customer-fulfillment.png)
 
-- Customer On-Time Fulfillment Rate.
-- Customer order volume.
-- Fulfillment trends.
-- Performance by customer and SKU.
-- Potential relationships with upstream delays.
+*Figure 4. Customer Fulfillment Analysis.*
 
-**Decision Support:**
-
-Identify customer service issues and
-investigate potential fulfillment bottlenecks.
-
----
-
-## Dashboard 4 — Inventory & Demand Outlook
+### Dashboard 4 — Inventory & Demand
 
 **Business Question:**
 
-Are current inventory levels sufficient
-to meet forecasted customer demand?
+Are inventory levels aligned with forecasted demand?
 
-**Analytical Focus:**
+![Inventory and Demand](images/inventory-demand.png)
 
-- Latest Inventory Quantity.
-- Inventory distribution by SKU.
-- Forecast Demand — Next 6 Months.
-- Months of Supply.
-- Inventory versus forecast demand.
-- Potential excess stock and shortage risks.
-
-**Decision Support:**
-
-Support inventory allocation, replenishment,
-and safety stock planning.
+*Figure 5. Inventory and Demand Analysis.*
 
 ---
 
-# 09. 🛠️ Tools & Technologies
+## 08. 🔍 Key Insights
+
+This section presents the main findings
+identified through the Power BI analysis.
+
+| Analytical Area | Key Finding | Business Implication |
+|---|---|---|
+| Supplier Performance | To be completed | To be completed |
+| Customer Fulfillment | To be completed | To be completed |
+| Inventory Management | To be completed | To be completed |
+| Demand Planning | To be completed | To be completed |
+
+---
+
+## 09. 💡 Business Recommendations
+
+Business recommendations will be developed
+based on the analytical findings.
+
+Potential improvement areas include:
+
+- Supplier delivery reliability.
+- Customer order fulfillment.
+- Inventory planning.
+- Demand forecasting.
+- Supply chain performance monitoring.
+
+---
+
+## 10. 🛠️ Tools & Technologies
 
 | Tool | Application |
-|------|-------------|
-| Power BI | Interactive dashboard development and business intelligence |
-| Power Query | Data cleaning, transformation, and preparation |
-| DAX | KPI calculations and analytical measures |
-| Excel | Data exploration and preliminary analysis |
-| Data Modeling | Relationships between analytical tables |
+|---|---|
+| Microsoft Excel | Source dataset |
+| Power Query | Data cleaning and transformation |
+| Power BI | Data modeling and visualization |
+| DAX | KPI calculations |
 | Design Thinking | Stakeholder analysis and problem definition |
 
 ---
 
-# 10. 🔍 Analytical Approach
-
-The project follows a structured business analytics workflow.
-
-### Step 1 — Business Understanding
-
-Identify stakeholder requirements,
-business challenges, and analytical objectives.
-
-### Step 2 — Data Understanding
-
-Explore available operational data,
-including purchase orders, customer orders,
-inventory records, and demand forecasts.
-
-### Step 3 — Data Preparation
-
-Prepare datasets for analysis by reviewing
-data consistency, completeness, and structure.
-
-### Step 4 — Data Modeling
-
-Organize analytical tables and establish
-relationships between business dimensions.
-
-### Step 5 — KPI Development
-
-Develop performance indicators using DAX
-and validate their business definitions.
-
-### Step 6 — Dashboard Development
-
-Build interactive visualizations aligned
-with stakeholder questions.
-
-### Step 7 — Business Analysis
-
-Investigate performance trends,
-identify operational risks,
-and formulate business recommendations.
-
----
-
-# 11. 💡 Expected Business Value
-
-The project aims to support supply chain management
-through five key contributions.
-
-| Business Value | Expected Contribution |
-|----------------|-----------------------|
-| End-to-End Visibility | Consolidated monitoring of supplier, fulfillment, inventory, and demand performance |
-| Supplier Reliability | Identification of suppliers associated with shipment delays |
-| Customer Service | Improved understanding of customer fulfillment performance |
-| Inventory Planning | Identification of potential stock shortages and excess inventory |
-| Decision Support | Analytical insights supporting operational reviews and S&OP discussions |
-
-These benefits represent the intended value
-of the analytical solution rather than
-verified operational improvements.
-
----
-
-# 12. 📸 Dashboard Preview
-
-Dashboard screenshots will be added here.
-
-Suggested screenshots:
-
-- Supply Chain Overview
-- Supplier Performance
-- Customer Fulfillment
-- Inventory & Demand Outlook
-
----
-
-# 13. 📈 Key Findings & Business Recommendations
-
-This section will present the main findings
-from the completed Power BI analysis.
-
-The analysis will focus on:
-
-- Supplier shipment reliability.
-- Customer fulfillment performance.
-- Inventory imbalances.
-- Demand and forecast variations.
-- Potential operational improvement opportunities.
-
-Recommendations will be supported by
-quantitative evidence from the dashboard.
-
----
-
-# 14. ⚠️ Project Limitations
-
-Several considerations should be taken into account
-when interpreting the analysis.
-
-- KPI results depend on the completeness and
-  accuracy of the available operational data.
-- Shipment and fulfillment performance require
-  consistent date definitions.
-- Forecast comparisons require alignment
-  between historical and forecast periods.
-- Relationships between operational indicators
-  do not necessarily establish causality.
-- Inventory coverage estimates depend on
-  the selected demand assumptions.
-
-These considerations are important for
-ensuring reliable interpretation of results.
-
----
-
-# 15. 👩‍💻 About the Author
+## 👩‍💻 Author
 
 **Mai Tram Nguyen**
 
 MBA Graduate in Logistics & Supply Chain Management
 
-Passionate about applying data analytics
-to supply chain management and business decision-making.
+**Professional Interests:**
 
-My professional interests include:
+Supply Chain Analytics • Data Analytics •
+Business Intelligence • Inventory Management •
+Demand Planning
 
-- Supply Chain Analytics
-- Business Intelligence
-- Inventory Management
-- Demand Planning
-- Operational Performance Analysis
-- Data Visualization
+**Technical Skills:**
 
-**Technical Skills:** Power BI | SQL | Excel | DAX | Power Query
+Power BI • SQL • Excel • Power Query • DAX
 
 ---
 
-### 📌 Project Status
+## 📌 Project Status
 
 Portfolio documentation in progress.
 
 Dashboard screenshots, analytical findings,
-and business recommendations will be added
+and business recommendations will be updated
 as the project documentation is finalized.
