@@ -303,13 +303,6 @@ reference across the source tables.
 | Order Forecast | SKU | Demand planning |
 | SKU Mapping | SKU | Product dimension |
 
-### Power BI Data Model
-
-![Power BI Data Model](images/data-model.png)
-
-*Figure 1. Power BI data model and table relationships.*
-
----
 
 ## 06. 📐 KPI Development
 
@@ -376,9 +369,9 @@ visualizations to explore supply chain performance.
 
 How effectively is the overall supply chain performing?
 
-![Supply Chain Overview](images/dashboard-overview.png)
+<img width="1320" height="747" alt="1_" src="https://github.com/user-attachments/assets/89eb0702-3854-43ef-8c6d-3eb7b5c567c6" />
 
-*Figure 2. Supply Chain Performance Overview.*
+*Figure 1. Supply Chain Performance Overview.*
 
 ### Dashboard 2 — Supplier Performance
 
@@ -386,7 +379,8 @@ How effectively is the overall supply chain performing?
 
 Are suppliers meeting shipment commitments?
 
-![Supplier Performance](images/supplier-performance.png)
+<img width="1313" height="741" alt="2" src="https://github.com/user-attachments/assets/c4068ad1-487a-43af-8306-a2fe827e24a0" />
+
 
 *Figure 3. Supplier Performance Analysis.*
 
@@ -396,19 +390,18 @@ Are suppliers meeting shipment commitments?
 
 Are customer orders being shipped on time?
 
-![Customer Fulfillment](images/customer-fulfillment.png)
-
-*Figure 4. Customer Fulfillment Analysis.*
+*Figure 3<img width="1313" height="744" alt="3_" src="https://github.com/user-attachments/assets/c2740ae8-a41b-499c-b13e-0729aa1dc52e" />
+. Customer Fulfillment Analysis.*
 
 ### Dashboard 4 — Inventory & Demand
 
 **Business Question:**
 
 Are inventory levels aligned with forecasted demand?
+<img width="1318" height="738" alt="4_" src="https://github.com/user-attachments/assets/ebce48b6-c040-4b37-8035-60843ac44464" />
 
-![Inventory and Demand](images/inventory-demand.png)
 
-*Figure 5. Inventory and Demand Analysis.*
+*Figure 4. Inventory and Demand Analysis.*
 
 ---
 
@@ -438,9 +431,9 @@ Potential improvement areas include:
 - Inventory planning.
 - Demand forecasting.
 - Supply chain performance monitoring.
+<img width="1291" height="734" alt="5_" src="https://github.com/user-attachments/assets/ce58f5b7-bd1c-4cde-84c0-48449f6c7b0a" />
 
----
-
+*Figure 5. Recommandation.*
 ## 10. 🛠️ Tools & Technologies
 
 | Tool | Application |
@@ -469,12 +462,3 @@ Demand Planning
 
 Power BI • SQL • Excel • Power Query • DAX
 
----
-
-## 📌 Project Status
-
-Portfolio documentation in progress.
-
-Dashboard screenshots, analytical findings,
-and business recommendations will be updated
-as the project documentation is finalized.
