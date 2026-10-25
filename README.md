@@ -80,7 +80,7 @@ representing interconnected supply chain activities.
 
 ### 2.3 Dataset Details
 
-#### 📦 Dataset 1 — Purchase Order
+#### 📦 Dataset 1: Purchase Order
 
 Contains procurement transactions between the wholesaler
 and manufacturers.
@@ -100,7 +100,7 @@ and manufacturers.
 Evaluate supplier reliability, shipment delays,
 and procurement performance.
 
-#### 🏭 Dataset 2 — Wholesaler Inventory Record
+#### 🏭 Dataset 2: Wholesaler Inventory Record
 
 Contains monthly inventory snapshots at the
 distribution center.
@@ -116,7 +116,7 @@ distribution center.
 Monitor inventory levels, identify stock variations,
 and evaluate inventory availability.
 
-#### 🚚 Dataset 3 — Wholesaler Customer Order Record
+#### 🚚 Dataset 3: Wholesaler Customer Order Record
 
 Contains customer orders received and shipped
 by the wholesaler.
@@ -137,7 +137,7 @@ by the wholesaler.
 Analyze customer demand, shipment performance,
 and order fulfillment reliability.
 
-#### 📈 Dataset 4 — Wholesaler Order Forecast
+#### 📈 Dataset 4: Wholesaler Order Forecast
 
 Contains forecasted customer demand at SKU level.
 
@@ -148,7 +148,7 @@ Contains forecasted customer demand at SKU level.
 - Identify potential stock shortages.
 - Support inventory planning.
 
-#### 🏷️ Dataset 5 — SKU Mapping
+#### 🏷️ Dataset 5 : SKU Mapping
 
 Contains product reference information.
 
@@ -176,7 +176,7 @@ The methodology consists of five stages:
 
 **Empathize → Define → Ideate → Prototype → Test**
 
-### Step 1 — Empathize
+### Step 1: Empathize
 
 **Objective:** Understand the dataset, business context,
 and stakeholder expectations.
@@ -195,7 +195,7 @@ and stakeholder expectations.
 - What information does the stakeholder need?
 - Which business decisions should the dashboard support?
 
-### Step 2 — Define
+### Step 2: Define
 
 **Objective:** Translate stakeholder needs into
 specific analytical problems.
@@ -213,7 +213,7 @@ specific analytical problems.
 > supply chain visibility to identify operational
 > performance gaps and support better decisions?
 
-### Step 3 — Ideate
+### Step 3: Ideate
 
 **Objective:** Develop the analytical framework
 and dashboard design concept.
@@ -226,7 +226,7 @@ and dashboard design concept.
 | 3.4 Visualization Selection | Select charts according to business questions | Visualization plan |
 | 3.5 Wireframing | Plan the visual layout | Dashboard mockup |
 
-### Step 4 — Prototype
+### Step 4: Prototype
 
 **Objective:** Develop the Power BI analytical solution.
 
@@ -238,7 +238,7 @@ and dashboard design concept.
 | 4.4 Dashboard Development | Build Power BI visualizations | Dashboard |
 | 4.5 Interactive Features | Configure slicers and filters | Interactive reporting |
 
-### Step 5 — Test & Iterate
+### Step 5: Test & Iterate
 
 **Objective:** Evaluate analytical accuracy,
 dashboard usability, and business relevance.
@@ -363,7 +363,7 @@ in the Power BI model.*
 The Power BI report provides interactive
 visualizations to explore supply chain performance.
 
-### Dashboard 1 — Supply Chain Overview
+### Dashboard 1: Supply Chain Overview
 
 **Business Question:**
 
@@ -373,7 +373,7 @@ How effectively is the overall supply chain performing?
 
 *Figure 1. Supply Chain Performance Overview.*
 
-### Dashboard 2 — Supplier Performance
+### Dashboard 2: Supplier Performance
 
 **Business Question:**
 
@@ -384,7 +384,7 @@ Are suppliers meeting shipment commitments?
 
 *Figure 3. Supplier Performance Analysis.*
 
-### Dashboard 3 — Customer Fulfillment
+### Dashboard 3: Customer Fulfillment
 
 **Business Question:**
 
@@ -393,7 +393,7 @@ Are customer orders being shipped on time?
 *Figure 3<img width="1313" height="744" alt="3_" src="https://github.com/user-attachments/assets/c2740ae8-a41b-499c-b13e-0729aa1dc52e" />
 . Customer Fulfillment Analysis.*
 
-### Dashboard 4 — Inventory & Demand
+### Dashboard 4: Inventory & Demand
 
 **Business Question:**
 
